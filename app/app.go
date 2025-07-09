@@ -462,10 +462,10 @@ func (m *home) handleKeyPress(msg tea.KeyMsg) (mod tea.Model, cmd tea.Cmd) {
 		m.menu.SetState(ui.StateNewInstance)
 
 		return m, nil
-	case keys.KeyUp:
+	case keys.KeyPrev:
 		m.list.Up()
 		return m, m.instanceChanged()
-	case keys.KeyDown:
+	case keys.KeyNext:
 		m.list.Down()
 		return m, m.instanceChanged()
 	case keys.KeyShiftUp:
